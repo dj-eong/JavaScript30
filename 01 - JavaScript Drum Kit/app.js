@@ -6,6 +6,11 @@ function playSound(note) {
     clone.play();
 }
 
+// function playSound(note) {
+//     note.currentTime = 0;
+//     note.play();
+// }
+
 // window.addEventListener('keydown', function (e) {
 //     if (e.keyCode === 65) {
 //         keyArray[0].classList.add('playing');
@@ -22,7 +27,7 @@ window.addEventListener('keydown', function (e) {
     const sound = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     key.classList.add('playing');
 
-    this.setTimeout(function () {
+    setTimeout(function () {
         key.classList.remove('playing');
     }, 100);
 
